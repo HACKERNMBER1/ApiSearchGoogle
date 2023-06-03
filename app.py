@@ -8,11 +8,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/images', methods=['GET'])
+@app.route('/', methods=['GET'])
 
 def get_images():
 
-    search_term = request.args.get('search_term')
+    search_term = request.args.get('search')
 
     url = f"https://www.google.com/search?q={search_term}&source=lnms&tbm=isch"
 
